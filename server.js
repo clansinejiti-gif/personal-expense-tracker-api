@@ -1,4 +1,6 @@
 import express from 'express'
+import categoryRoutes from './routes/categoryRoutes.js';
+app.use('/categories', categoryRoutes);
 const app = express();
 const port = 3000;
 
