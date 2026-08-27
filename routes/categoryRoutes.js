@@ -1,5 +1,4 @@
 
-
 import express from 'express';
 import {
   handleCreateCategory,
@@ -8,12 +7,11 @@ import {
   handleUpdateCategory,
   handleDeleteCategory,
 } from '../controllers/categoryController.js';
-import authMiddleware from '../middlewares/authMiddleware.js';
+import { authenticate } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-// All category routes require a logged-in user
-router.use(authMiddleware);
+router.use(authenticate);
 
 router.post('/', handleCreateCategory);
 router.get('/', handleGetCategories);
