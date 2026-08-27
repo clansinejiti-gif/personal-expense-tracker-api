@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { query } from '../config/db.js';
-import { httpError } from '../middleware/errorHandler.js';
+import { httpError } from '../middlewares/errorHandler.js';
 
 function signToken(user) {
   return jwt.sign(
@@ -44,7 +44,7 @@ export async function register(req, res, next) {
 }
 
 // 
-POST /api/auth/login
+//POST /api/auth/login
 export async function login(req, res, next) {
   try {
     const { email, password } = req.body;

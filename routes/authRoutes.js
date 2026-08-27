@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { register, login } from '../controllers/authController.js';
+import { register, login } from '../controllers/authControllerS.js';
 import { registerRules, loginRules, validate } from '../middlewares/validate.js';
 import { authenticate } from '../middlewares/authMiddleware.js';
 
