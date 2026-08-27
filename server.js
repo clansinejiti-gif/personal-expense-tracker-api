@@ -1,10 +1,8 @@
 import express from 'express'
 import authRoutes from './routes/authRoutes.js'
 import categoryRoutes from './routes/categoryRoutes.js';
-<<<<<<< HEAD
 app.use('/categories', categoryRoutes);
-=======
->>>>>>> 78354df5211c31a0e7cb3246ae6d1f06ed8445ed
+import {errorHandler} from './middlewares/errorHandler.js'
 const app = express();
 const port = 3000;
 
@@ -17,7 +15,7 @@ app.get('/health', (req, res) =>{
 
 } )
 
-
+app.use(errorHandler)
 app.listen(port, ()=>{
     console.log(`server running on: http://localhost:${port}`)
 })
