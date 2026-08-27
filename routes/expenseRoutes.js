@@ -1,5 +1,5 @@
 import express from 'express';
-import { authenticate } from '../middlewares/authMiddleware.js';
+import { authenticate } from '../middleware/authMiddleware.js';
 import {
   createExpenseHandler, getAllExpensesHandler, getExpenseByIdHandler,
   updateExpenseHandler, deleteExpenseHandler,

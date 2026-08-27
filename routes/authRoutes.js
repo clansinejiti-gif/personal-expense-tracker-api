@@ -3,6 +3,7 @@ import { register, login } from '../controllers/authControllerS.js';
 import { registerRules, loginRules, validate } from '../middlewares/validate.js';
 import { authenticate } from '../middlewares/authMiddleware.js';
 
+
 const router = Router();
 
 router.post('/register', registerRules, validate, register);
