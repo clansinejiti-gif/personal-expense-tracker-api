@@ -6,7 +6,7 @@ import {
   handleUpdateCategory,
   handleDeleteCategory,
 } from '../controllers/categoryController.js';
-import { authenticate } from '../middlewares/authMiddleware.js';
+import { authenticate } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 

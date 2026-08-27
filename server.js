@@ -1,12 +1,12 @@
 import express from 'express'
 import authRoutes from './routes/authRoutes.js'
 import categoryRoutes from './routes/categoryRoutes.js';
-app.use('/categories', categoryRoutes);
-import {errorHandler} from './middlewares/errorHandler.js'
+import {errorHandler} from './middleware/errorHandler.js'
 const app = express();
 const port = 3000;
-
 app.use(express.json());
+
+app.use('/categories', categoryRoutes);
 app.use('/auth', authRoutes)
 app.use('/categories', categoryRoutes)
 
